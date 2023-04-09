@@ -1,13 +1,13 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import NavBar from './components/NavBar/NavBar';
+import Banner from './components/Banner/Banner';
 
 
 function App() {
   return (
     <>
-    <NavBar className='container'></NavBar>
-    
+    <NavBar></NavBar>
+    <Banner></Banner>
     </>
   );
 }
