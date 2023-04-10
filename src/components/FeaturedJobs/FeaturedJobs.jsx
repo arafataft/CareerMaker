@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 
 const FeaturedJobs = () => {
@@ -28,7 +29,7 @@ const FeaturedJobs = () => {
                 <Card.Text>
                   {job.company}
                 </Card.Text>
-                <Button variant="primary">View Details</Button>
+                <Link to={`/${job.id}`}><Button variant="primary">View Details</Button></Link>
               </Card.Body>
             </Card>
           </div>))
