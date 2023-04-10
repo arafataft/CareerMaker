@@ -1,17 +1,15 @@
 import React from 'react';
 import NavBar from './components/NavBar/NavBar';
-import Banner from './components/Banner/Banner';
 import JobCategory from './components/JobCategory/JobCategory';
-import FeaturedJobs from './components/FeaturedJobs/FeaturedJobs';
+import { Outlet, useLoaderData } from 'react-router-dom'
 
 
 function App() {
   return (
     <>
     <NavBar></NavBar>
-    <Banner></Banner>
-    <JobCategory></JobCategory>
-    <FeaturedJobs></FeaturedJobs>
+    <Outlet />
+    
     </>
   );
 }
