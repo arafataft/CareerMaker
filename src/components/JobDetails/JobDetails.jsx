@@ -13,7 +13,7 @@ const JobDetails = () => {
         return obj.id === id;
         
       });
-      console.log(found);
+    //   console.log(found);
     return (
         <div className="row my-5 py-5 container ">
           <div className="col-md-6 px-5 mx-auto">
