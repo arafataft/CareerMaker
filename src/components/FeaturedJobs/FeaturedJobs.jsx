@@ -10,8 +10,17 @@ const FeaturedJobs = () => {
   useEffect(() => {
     fetch("data1.json")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => setJobs(data.slice(0,4)));
   }, [])
+  
+  const handleSeeMore=()=>{
+      fetch("data1.json")
+        .then((res) => res.json())
+        .then((data) => setJobs(data));
+  }
+  
+
+
   return (
     <div>
       <div className="py-5 bg-light">
@@ -51,7 +60,8 @@ const FeaturedJobs = () => {
                 </Card>
               </div>))
             }
-            <div className='text-center'><Button variant="primary">Sea More</Button></div>
+            
+            {jobs.length<=4?<div className='text-center'><Button onClick={()=>handleSeeMore()} variant="primary">Sea More</Button></div>:""}
 
 
           </div>
