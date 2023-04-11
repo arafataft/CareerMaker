@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button, DropdownButton, Dropdown } from "react-bootstrap";
-import { getShoppingCart } from '../../Utils/fakeDB';
+import { getData } from '../../Utils/fakeDB';
 import {
     useLoaderData,
     Link,
@@ -11,7 +11,7 @@ const AppliedJobs = () => {
     const [appliedJob, setAppliedJob] = useState([]);
     const [filteredJobs, setFilteredJobs] = useState([]);
 
-    const savedCart = getShoppingCart();
+    const savedCart = getData();
     const AllJobs = useLoaderData();
 
     useEffect(() => {

@@ -5,6 +5,8 @@ import {
     useParams,
   } from "react-router-dom";
 import { addToDb } from '../../Utils/fakeDB';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const JobDetails = () => {
     let {id} = useParams();
@@ -16,6 +18,8 @@ const JobDetails = () => {
         
       });
 
+      const notify = () => toast("Already Applied!");
+
       const handleAddToCart = (jobs) => {
         let newJob = [];
 
@@ -24,8 +28,8 @@ const JobDetails = () => {
             newJob = [...cart, jobs]
         }
         else {
-            console.log('already');
-            return
+            notify();
+            return;
         }
 
         setCart(newJob);
