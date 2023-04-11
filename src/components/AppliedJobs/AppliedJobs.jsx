@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Button, DropdownButton, Dropdown } from "react-bootstrap";
 import { getShoppingCart } from '../../Utils/fakeDB';
 import {
@@ -8,39 +8,48 @@ import {
 import './AppliedJobs.css';
 
 const AppliedJobs = () => {
+    const [appliedJob, setAppliedJob] = useState([]);
+    const [filteredJobs, setFilteredJobs] = useState([]);
 
-    const [appliedJob,setAppliedJob]=useState([]);
+    const savedCart = getShoppingCart();
     const AllJobs = useLoaderData();
 
-    const savedCart = getShoppingCart()
-    const initialCart = []
-    for (const id in savedCart) {
-        const foundProduct = AllJobs.find(product => product.id == id)
-        if (foundProduct) {
+    useEffect(() => {
+        const updatedAppliedJob = [];
 
-            initialCart.push(foundProduct)
-            // setAppliedJob([...appliedJob,foundProduct]);
+        for (const id in savedCart) {
+            const foundProduct = AllJobs.find(product => product.id == id);
+
+            if (foundProduct) {
+                updatedAppliedJob.push(foundProduct);
+            }
         }
+
+        setAppliedJob(updatedAppliedJob);
+        setFilteredJobs(updatedAppliedJob);
+    }, []);
+
+    const filterOnsite = () => {
+        const OnsiteFitter = appliedJob.filter(item => item.remoteOrOnsite === 'Onsite');
+        setFilteredJobs(OnsiteFitter);
     }
 
-
-    // setAppliedJob(initialCart);
-    // console.log(initialCart);
-
-    
-
+    const filterRemote = () => {
+        const RemoteFitter = appliedJob.filter(item => item.remoteOrOnsite === 'Remote');
+        setFilteredJobs(RemoteFitter);
+    }
 
 
     return (
         <div className="container mt-5 pt-5">
             <div className="App">
-                <DropdownButton  title="Menu" className="menu-dropdown mr-5 mt-2">
-                    <Dropdown.Item ><Button>Remote</Button></Dropdown.Item>
-                    <Dropdown.Item ><Button>on-site</Button></Dropdown.Item>
+                <DropdownButton title="Filter" className="menu-dropdown mr-5 mt-2">
+                    <Dropdown.Item ><Button onClick={() => filterRemote()}>Remote</Button></Dropdown.Item>
+                    <Dropdown.Item ><Button onClick={() => filterOnsite()}>Onsite</Button></Dropdown.Item>
                 </DropdownButton>
             </div>
             {
-                appliedJob.map((pp) =>
+                filteredJobs.map((pp) =>
                     <Card key={pp.id} className="my-4">
                         <div className="d-flex">
                             <Card.Img
