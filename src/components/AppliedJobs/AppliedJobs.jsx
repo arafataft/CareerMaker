@@ -1,11 +1,38 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { getShoppingCart } from '../../Utils/fakeDB';
+import {
+    useLoaderData,
+    Link,
+  } from "react-router-dom";
 
 const AppliedJobs = () => {
+
+    const cana=useLoaderData();
+      
+        const savedCart = getShoppingCart()
+        const initialCart = []
+        for (const id in savedCart) {
+          const foundProduct = cana.find(product => product.id == id)
+          if (foundProduct) {
+            
+            initialCart.push(foundProduct)
+          }
+        }
+      
+      
+      
+      console.log(initialCart);
+
+
+
+
   return (
     <div className="container">
       <h2>Applied Jobs</h2>
-      <Card className="my-4">
+      {
+        initialCart.map((pp)=> 
+        <Card key={pp.id} className="my-4">
         <div className="d-flex">
           <Card.Img
             variant="left"
@@ -14,7 +41,7 @@ const AppliedJobs = () => {
           />
           <div className="flex-grow-1">
             <Card.Body>
-              <Card.Title>Job Title 1</Card.Title>
+              <Card.Title>{pp.company}</Card.Title>
               <Card.Text>
                 <small>Description</small>
               </Card.Text>
@@ -23,12 +50,15 @@ const AppliedJobs = () => {
                   <div>Location: New York</div>
                   <div>Salary: $100k - $120k</div>
                 </div>
-                <Button variant="primary">View Details</Button>
+                <Link to={`/${pp.id}`}><Button variant="primary">View Details</Button></Link>
               </div>
             </Card.Body>
           </div>
         </div>
       </Card>
+        )
+      }
+      
      
     </div>
   );

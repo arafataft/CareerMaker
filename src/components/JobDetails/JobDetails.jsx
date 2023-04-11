@@ -1,19 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import {
     useLoaderData,
     useParams,
   } from "react-router-dom";
+import { addToDb } from '../../Utils/fakeDB';
 
 const JobDetails = () => {
     let {id} = useParams();
     const can=useLoaderData();
+    const [cart,setCart]=useState([]);
     
     const found = can.find(obj => {
-        return obj.id === id;
+        return obj.id == id;
         
       });
-    //   console.log(found);
+
+      const handleAddToCart = (product) => {
+        // cart.push(product); '
+        let newCart = [];
+        // console.log(product);
+        //  newCart = [...cart, product];
+        // if product doesn't exist in the cart, then set quantity = 1
+        // if exist update quantity by 1
+        const exists = cart.find(pd => pd.id === product.id);
+        if (!exists) {
+            // product.quantity = 1;
+            newCart = [...cart, product]
+        }
+        else {
+            // exists.quantity = exists.quantity + 1;
+            const remaining = cart.filter(pd => pd.id !== product.id);
+            newCart = [...remaining, exists];
+        }
+
+        setCart(newCart);
+        addToDb(product.id);
+    }
+
+
+
+
+      // console.log(found);
     return (
         <div className="row my-5 py-5 container ">
           <div className="col-md-6 px-5 mx-auto">
@@ -44,7 +72,7 @@ const JobDetails = () => {
                 
               </Card.Body>
             </Card>
-            <Button variant="primary">Apply Now</Button>
+            <Button onClick={()=>handleAddToCart(found)} variant="primary">Apply Now</Button>
           </div>
         </div>
       );
