@@ -1,25 +1,25 @@
 [
     {
       "id": 1,
-      "img": "https://picsum.photos/500/500?random=1",
+      "img": "accounts.png",
       "title": "Account & Finance",
       "jobs": "300 Jobs Available"
     },
     {
       "id": 2,
-      "img": "https://picsum.photos/500/500?random=2",
+      "img": "business.png",
       "title": "Creative Design",
       "jobs": "100+ Jobs Available"
     },
     {
       "id": 3,
-      "img": "https://picsum.photos/500/500?random=3",
+      "img": "social-media .png",
       "title": "Marketing & Sales",
       "jobs": "150 Jobs Available"
     },
     {
       "id": 4,
-      "img": "https://picsum.photos/500/500?random=4",
+      "img": "chip.png",
       "title": "Engineering Job",
       "jobs": "224 Jobs Available"
     }

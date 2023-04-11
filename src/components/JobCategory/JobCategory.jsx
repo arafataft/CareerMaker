@@ -18,7 +18,7 @@ function JobCategory() {
       <div className="container text-center py-5">
         <div className="mb-5">
         <h2 >Job Category List</h2>
-        <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+        <p className='text-secondary'>Explore thousands of job opportunities with all the information you need. Its your future</p>
         </div>
         <div className="row">
           {
