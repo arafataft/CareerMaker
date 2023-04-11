@@ -25,7 +25,7 @@ const FeaturedJobs = () => {
             <Card>
               <Card.Img className='m-4' style={{ width: 200, height: 60 }} src={'https://picsum.photos/500/500?random=2'} />
               <Card.Body >
-                <Card.Title>{job.position}</Card.Title>
+                <Card.Title>{job.companyName}</Card.Title>
                 <Card.Text>
                   {job.company}
                 </Card.Text>

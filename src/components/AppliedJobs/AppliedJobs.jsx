@@ -41,7 +41,7 @@ const AppliedJobs = () => {
           />
           <div className="flex-grow-1">
             <Card.Body>
-              <Card.Title>{pp.company}</Card.Title>
+              <Card.Title>{pp.companyName}</Card.Title>
               <Card.Text>
                 <small>Description</small>
               </Card.Text>

@@ -1,74 +1,110 @@
 [
-    {
-      "id": 11,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
-    },
-    {
-      "id": 22,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
-    },
-    {
-      "id": 33,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
-    },
-    {
-      "id": 44,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
-    },
-    {
-      "id": 55,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
-    },
-    {
-      "id": 66,
-      "img": "link",
-      "company": "Google LLC",
-      "position": "Technical Database Engineer",
-      "location": "Dhaka Bangaldesh",
-      "salary": "100K - 150K",
-      "type": [
-        "Remote",
-        "Full Time"
-      ]
+  {
+    "id": 1,
+    "companyLogo": "https://example.com/logo1.png",
+    "jobTitle": "Software Engineer",
+    "companyName": "Google",
+    "remoteOrOnsite": "Onsite",
+    "location": "Mountain View, CA",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$120,000 - $150,000",
+    "jobDescription": "Develop and maintain software applications for Google products.",
+    "jobResponsibility": "Design, code, test, and debug software applications.",
+    "educationalRequirements": "Bachelor's degree in Computer Science or related field.",
+    "experiences": "3+ years of experience in software development.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@google.com"
     }
-  ]
+  },
+  {
+    "id": 2,
+    "companyLogo": "https://example.com/logo2.png",
+    "jobTitle": "Data Scientist",
+    "companyName": "Facebook",
+    "remoteOrOnsite": "Remote",
+    "location": "Anywhere",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$130,000 - $160,000",
+    "jobDescription": "Analyze and interpret complex data to inform business decisions.",
+    "jobResponsibility": "Develop and implement statistical models and algorithms.",
+    "educationalRequirements": "Master's degree in Data Science or related field.",
+    "experiences": "5+ years of experience in data analysis.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@facebook.com"
+    }
+  },
+  {
+    "id": 3,
+    "companyLogo": "https://example.com/logo3.png",
+    "jobTitle": "Product Manager",
+    "companyName": "Amazon",
+    "remoteOrOnsite": "Onsite",
+    "location": "Seattle, WA",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$140,000 - $170,000",
+    "jobDescription": "Lead the development and launch of new products.",
+    "jobResponsibility": "Define product requirements, create product roadmaps, and work with cross-functional teams to deliver products.",
+    "educationalRequirements": "Bachelor's degree in Business, Engineering, or related field.",
+    "experiences": "7+ years of experience in product management.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@amazon.com"
+    }
+  },
+  {
+    "id": 4,
+    "companyLogo": "https://example.com/logo4.png",
+    "jobTitle": "UX Designer",
+    "companyName": "Apple",
+    "remoteOrOnsite": "Onsite",
+    "location": "Cupertino, CA",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$110,000 - $140,000",
+    "jobDescription": "Design user interfaces for Apple products.",
+    "jobResponsibility": "Create wireframes, prototypes, and visual designs.",
+    "educationalRequirements": "Bachelor's degree in Design or related field.",
+    "experiences": "3+ years of experience in UX design.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@apple.com"
+    }
+  },
+  {
+    "id": 5,
+    "companyLogo": "https://example.com/logo5.png",
+    "jobTitle": "Software Developer",
+    "companyName": "Microsoft",
+    "remoteOrOnsite": "Remote",
+    "location": "Anywhere",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$120,000 - $150,000",
+    "jobDescription": "Develop and maintain software applications for Microsoft products.",
+    "jobResponsibility": "Design, code, test, and debug software applications.",
+    "educationalRequirements": "Bachelor's degree in Computer Science or related field.",
+    "experiences": "3+ years of experience in software development.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@microsoft.com"
+    }
+  },
+  {
+    "id": 6,
+    "companyLogo": "https://example.com/logo6.png",
+    "jobTitle": "Cybersecurity Analyst",
+    "companyName": "IBM",
+    "remoteOrOnsite": "Onsite",
+    "location": "Armonk, NY",
+    "fulltimeOrParttime": "Fulltime",
+    "salary": "$130,000 - $160,000",
+    "jobDescription": "Protect IBM's information systems and data from cyber threats.",
+    "jobResponsibility": "Monitor and analyze security alerts, investigate security incidents, and develop security policies and procedures.",
+    "educationalRequirements": "Bachelor's degree in Cybersecurity or related field.",
+    "experiences": "5+ years of experience in cybersecurity.",
+    "contactInformation": {
+      "phone": "555-555-5555",
+      "email": "jobs@ibm.com"
+    }
+  }
+]

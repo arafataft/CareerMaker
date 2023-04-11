@@ -8,9 +8,9 @@ function Banner() {
         <Row>
           
           <Col md={6} className="d-flex align-items-center">
-            <div>
-              <h2 className="mb-3">One Step Closer To Your Dream Job</h2>
-              <p className="mb-4">Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
+            <div className='ps-5'>
+              <h1 className="mb-3">One Step<br/> Closer To Your <br/><span className='text-primary'>Dream Job</span> </h1>
+              <p className="mb-4 text-secondary">Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
               <Button variant="primary">Get Started</Button>
             </div>
           </Col>
