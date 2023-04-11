@@ -13,6 +13,7 @@ import {
 import JobDetails from './components/JobDetails/JobDetails';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 
 const router= createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router= createBrowserRouter([
       {
         path:'blog',
         element:<Blog></Blog>,
+        
+      },
+      {
+        path:'appliedJobs',
+        element:<AppliedJobs></AppliedJobs>,
         
       }
     ]
