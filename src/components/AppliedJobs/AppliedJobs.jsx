@@ -1,37 +1,46 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Button, DropdownButton, Dropdown } from "react-bootstrap";
 import { getShoppingCart } from '../../Utils/fakeDB';
 import {
     useLoaderData,
     Link,
 } from "react-router-dom";
+import './AppliedJobs.css';
 
 const AppliedJobs = () => {
 
-    const cana = useLoaderData();
+    const [appliedJob,setAppliedJob]=useState([]);
+    const AllJobs = useLoaderData();
 
     const savedCart = getShoppingCart()
     const initialCart = []
     for (const id in savedCart) {
-        const foundProduct = cana.find(product => product.id == id)
+        const foundProduct = AllJobs.find(product => product.id == id)
         if (foundProduct) {
 
             initialCart.push(foundProduct)
+            // setAppliedJob([...appliedJob,foundProduct]);
         }
     }
 
 
+    // setAppliedJob(initialCart);
+    // console.log(initialCart);
 
-    console.log(initialCart);
-
+    
 
 
 
     return (
-        <div className="container">
-            <h2>Applied Jobs</h2>
+        <div className="container mt-5 pt-5">
+            <div className="App">
+                <DropdownButton  title="Menu" className="menu-dropdown mr-5 mt-2">
+                    <Dropdown.Item ><Button>Remote</Button></Dropdown.Item>
+                    <Dropdown.Item ><Button>on-site</Button></Dropdown.Item>
+                </DropdownButton>
+            </div>
             {
-                initialCart.map((pp) =>
+                appliedJob.map((pp) =>
                     <Card key={pp.id} className="my-4">
                         <div className="d-flex">
                             <Card.Img
