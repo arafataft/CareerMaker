@@ -9,7 +9,7 @@ const Blog = () => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">When should you use context API?</h5>
-                            <p className="card-text"><span className="fw-bold">Props</span> is immutable data that are passed from a parent component to its child component as arguments.  we use props when we want to pass data from a parent component down to its child components. <br /> <span className="fw-bold">State</span> is mutable data that is managed internally by a component. It represents the current state of the component .To update the state of a component we use state.</p>
+                            <p className="card-text">The React Context API is useful when we have data or state that needs to be accessed by multiple components throughout our application. It can simplify our code and make it more modular by avoiding prop drilling. It's particularly helpful for global state management, such as user authentication, theme settings, and language preferences. However, it should be used judiciously to avoid unnecessary complexity.</p>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,7 @@ const Blog = () => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">What is a custom hook?</h5>
-                            <p className="card-text">When we call useState with an initial value, React sets up a new state variable and assigns it the initial value. When we call the updater set function , React updates the value of the state variable and re-render of component and updates the display.</p>
+                            <p className="card-text">A custom hook is a function in React that allows us to reuse stateful logic between different components without duplicating code. It follows the naming convention of starting with "use" and can use built-in React hooks as well as other custom hooks. Custom hooks are useful for creating reusable and composable logic, such as fetching data from an API, that can be used in multiple components throughout our application.</p>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Blog = () => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">What is useRef?</h5>
-                            <p className="card-text">The useEffect  to perform side effects in functional components. Side effects are any actions or operations that have an effect outside of the scope of the component.  we can add dependency on dependency change useEffect run on every change. we can add a keyboard events to keyboard handle. Modifying the DOM.  Managing state outside of the component.</p>
+                            <p className="card-text">useRef is a hook in React that returns a mutable ref object to hold a reference to a DOM element or a value that persists between renders. It allows us to access and modify component properties without triggering a re-render, and manipulate DOM elements directly without relying on event listeners.</p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const Blog = () => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">What is useMemo?</h5>
-                            <p className="card-text">React is a JavaScript library to building user interfaces.  In react  we write instructions on how the page should look and behave in a virtual version of the page. we don't have to directly change the real page  React does it.    React use a virtual DOM which is like a copy of the real DOM in memory. When you make changes to your UI, React first updates the VDOM and then figures out what changes need to be made . React also provides a way to manage the state of your components, we can update them based on user interactions.</p>
+                            <p className="card-text">useMemo is a React hook that can help optimize performance by memoizing the result of a function and reusing it between renders. It allows you to avoid unnecessary computations and improve rendering speed, but should be used with care to avoid excessive memory usage and complexity.</p>
                         </div>
                     </div>
                 </div>
