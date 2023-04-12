@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDollarSign, faBriefcase, faPhone,faEnvelope,faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import {
     useLoaderData,
     useParams,
@@ -58,20 +60,23 @@ const JobDetails = () => {
                 <Card.Title>Job Details</Card.Title>
                 <hr />
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon} />Salary: {singleJob.salary}</span>
+                <span className="text-secondary "><FontAwesomeIcon icon={faDollarSign} /> Salary: {singleJob.salary}</span>
                 </Card.Text>
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} /> {singleJob.jobTitle}</span>
+                <span className="text-secondary "><FontAwesomeIcon icon={faBriefcase}/> Job Title: {singleJob.jobTitle}</span>
                 </Card.Text>
                 <Card.Text>
                   Contact Information:
                 </Card.Text>
                 <hr />
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} /> {singleJob.contactInformation.phone}</span>
+                <span className="text-secondary "><FontAwesomeIcon icon={faPhone}/> Phone: {singleJob.contactInformation.phone}</span>
                 </Card.Text>
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} /> {singleJob.contactInformation.email}</span>
+                <span className="text-secondary "><FontAwesomeIcon icon={faEnvelope} /> Email: {singleJob.contactInformation.email}</span>
+                </Card.Text>
+                <Card.Text>
+                <span className="text-secondary "><FontAwesomeIcon icon={faMapMarkerAlt} /> Address: {singleJob.location}</span>
                 </Card.Text>
                 
               </Card.Body>
