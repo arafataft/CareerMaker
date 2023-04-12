@@ -9,7 +9,7 @@ const Footer = () => {
           <Col xs={12} md={3}>
             <h3>CareerHub</h3>
             <p className='text-secondary'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
-            <img src="Group.png" alt="" />
+            <img src="group.jpg" alt="" />
           </Col>
           <Col xs={12} md={2}>
             <h6>Company</h6>

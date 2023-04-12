@@ -58,10 +58,10 @@ const JobDetails = () => {
                 <Card.Title>Job Details</Card.Title>
                 <hr />
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} />Salary: {singleJob.salary}</span>
+                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon} />Salary: {singleJob.salary}</span>
                 </Card.Text>
                 <Card.Text>
-                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} />Salary: {singleJob.jobTitle}</span>
+                <span className="text-secondary "><Card.Img style={{ width: 20, height: 20 }} src={singleJob.icon1} /> {singleJob.jobTitle}</span>
                 </Card.Text>
                 <Card.Text>
                   Contact Information:
